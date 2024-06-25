@@ -19,5 +19,6 @@ body {
   color: var(--main-text-color);
   &:hover {
     background-color: transparent;
+    color: #426bbc;
   }
 }
