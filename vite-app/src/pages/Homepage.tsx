@@ -62,7 +62,7 @@ function Homepage() {
       <AppShell>
         <AppShell.Header className="header">
           <Group style={{ padding: "20px" }}>
-            <Image src={nameLogo} h={25} w="auto" />
+            <Image src={nameLogo} h={30} w="auto" />
             <div
               style={{
                 alignItems: "flex-end",

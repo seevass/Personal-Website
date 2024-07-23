@@ -1,6 +1,7 @@
 :root {
   --main-bg-color: #fff4e2;
   --main-text-color: #ffb800;
+  font-size: 1.8rem;
 }
 
 body {
