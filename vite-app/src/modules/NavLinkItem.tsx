@@ -29,7 +29,7 @@ const NavLinkItem: React.FC<NavLinkItemProps> = ({ to, label }) => {
   }
 
   const styles = {
-    fontSize: "1.4rem",
+    fontSize: "2rem",
     color: isHovered ? getRandomHoverColor() : 'var(--main-text-color)',
   };
 

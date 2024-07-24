@@ -1,8 +1,3 @@
-:root {
-  --main-bg-color: #fff4e2;
-  --main-text-color: #ffb800;
-}
-
 .navLink {
     color: var(--main-text-color);
     background-color: transparent !important;

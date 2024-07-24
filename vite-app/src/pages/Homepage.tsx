@@ -2,6 +2,7 @@ import React from "react";
 import "./Homepage.css";
 
 import nameLogo from "../assets/streamText.gif";
+import tattooGif from "../assets/Barberpole_illusion_animated.gif"
 
 import "@mantine/core/styles.css";
 
@@ -9,23 +10,18 @@ import {
   MantineProvider,
   AppShell,
   Burger,
-  createTheme,
   Grid,
-  SimpleGrid,
-  Text,
   Space,
-  VisuallyHidden,
   Image,
   Group,
-  Container,
   Title,
-  NavLink,
   NavLinkStylesNames,
-  colorsTuple,
+  Flex,
 } from "@mantine/core";
 
 import { useDisclosure } from "@mantine/hooks";
 import NavLinkItem from "../modules/NavLinkItem";
+import ProjectSelector from "../modules/ProjectSelector";
 
 function Homepage() {
   const [opened, { toggle }] = useDisclosure();
@@ -37,7 +33,7 @@ function Homepage() {
           NavLink: {
             styles: (theme, params: NavLinkStylesNames) => ({
               label: {
-                fontSize: "1.4rem",
+                fontSize: "1.2rem",
                 fontWeight: 700,
               },
             }),
@@ -47,8 +43,8 @@ function Homepage() {
               padding: "xl",
               header: { height: 50 },
               navbar: {
-                width: 200,
-                breakpoint: "sm",
+                width: 140,
+                breakpoint: "md",
                 collapsed: {
                   mobile: !opened,
                 },
@@ -59,71 +55,75 @@ function Homepage() {
         },
       }}
     >
-      <AppShell>
-        <AppShell.Header className="header">
-          <Group style={{ padding: "20px" }}>
-            <Image src={nameLogo} h={30} w="auto" />
+        <AppShell layout='alt'>
+          <AppShell.Header className="header">
+            <Group style={{ padding: "20px" }}>
+              <Image src={nameLogo} h={27} w="auto" hiddenFrom="md"/>
+              <div
+                style={{
+                  alignItems: "flex-end",
+                  marginLeft: "auto",
+                  paddingRight: "15px",
+                }}
+              >
+                <Burger
+                  //opened={opened}
+                  onClick={toggle}
+                  hiddenFrom="md"
+                  size="md"
+                  color="yellow"
+                  style={{ padding: "10px"}}
+                />
+              </div>
+            </Group>
+          </AppShell.Header>
+
+          <AppShell.Navbar className="navBar" style={{ paddingLeft: "10px"}}>
             <div
-              style={{
-                alignItems: "flex-end",
-                marginLeft: "auto",
-                paddingRight: "15px",
-              }}
-            >
-              <Burger
-                opened={opened}
-                onClick={toggle}
-                hiddenFrom="sm"
-                size="md"
-                color="yellow"
-              />
-            </div>
-          </Group>
-        </AppShell.Header>
-
-        <AppShell.Navbar className="navBar" style={{ paddingLeft: "10px" }}>
-          <Title style={{ padding: "15px" }}> Sebastian Cruz</Title>
-          <Space h="sm" />
-
-          <NavLinkItem to="#about" label="About" />
-          <NavLinkItem to="#resume" label="Resume/CV" />
-          <NavLinkItem to="#linkedin" label="LinkedIn" />
-          <NavLinkItem to="#github" label="GitHub" />
-          <NavLinkItem to="#contact" label="Contact" />
-        </AppShell.Navbar>
-
-        <AppShell.Main>
-          <Grid>
-            <Grid.Col span="auto">
-              <div
                 style={{
-                  backgroundColor: "blue",
-                  width: "100px",
-                  height: "100px",
+                  alignItems: "flex-end",
+                  marginLeft: "auto",
+                  paddingRight: "20px",
+                  paddingTop: "20px",
                 }}
-              ></div>
-            </Grid.Col>
-            <Grid.Col span={4}>
-              <div
-                style={{
-                  backgroundColor: "blue",
-                  width: "100px",
-                  height: "100px",
-                }}
-              ></div>
-            </Grid.Col>
-            <Grid.Col span="auto">
-              <div
-                style={{
-                  backgroundColor: "blue",
-                  width: "100px",
-                  height: "100px",
-                }}
-              ></div>
-            </Grid.Col>
-          </Grid>
-        </AppShell.Main>
-      </AppShell>
+              >
+                <Burger
+                  opened={opened}
+                  onClick={toggle}
+                  hiddenFrom="md"
+                  size="md"
+                  color="yellow"
+                />
+              </div>
+            <Image src={nameLogo} h="auto" w={150} visibleFrom="md" 
+              style={{paddingLeft:"15px", paddingTop:"40px"}}/>
+            <Space h="sm" />
+            <Title style={{fontSize: "1.5em", paddingLeft:"20px"}}> Sebastian Cruz</Title>
+            <Space h="sm" />
+
+            <NavLinkItem to="#about" label="About" />
+            <NavLinkItem to="#resume" label="Resume/CV" />
+            <NavLinkItem to="#linkedin" label="LinkedIn" />
+            <NavLinkItem to="#github" label="GitHub" />
+            <NavLinkItem to="#contact" label="Contact" />
+          </AppShell.Navbar>
+
+          <AppShell.Main>
+            <ProjectSelector />
+          </AppShell.Main>
+
+            <AppShell.Aside
+              visibleFrom="md">
+                <Image src={tattooGif} h={200} w="100" />
+            </AppShell.Aside>
+
+            <AppShell.Footer
+              hiddenFrom="md"> 
+                <Image src={tattooGif} h={100} w="100"
+                  style={{transform: 'rotate(90deg)'}} />
+            </AppShell.Footer>
+
+        </AppShell>
     </MantineProvider>
   );
 }

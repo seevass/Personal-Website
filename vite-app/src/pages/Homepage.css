@@ -1,7 +1,8 @@
 :root {
   --main-bg-color: #fff4e2;
   --main-text-color: #ffb800;
-  font-size: 1.8rem;
+  --main-header-color: #393939;
+  font-size: clamp(1rem, 2vw + 1rem, 1.8rem);
 }
 
 body {
@@ -15,3 +16,4 @@ body {
 .navBar {
   background-color: var(--main-bg-color) !important;
 }
+
