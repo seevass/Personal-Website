@@ -1,7 +1,8 @@
 import React from 'react';
 import './ProjectSelector.css';
-import { Stack, Image } from '@mantine/core';
+import { Stack, Image, Group} from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
+import ProjectList from './ProjectList';
 
 import TempImage from '../assets/flower-mural.png';
 
@@ -12,7 +13,23 @@ function ProjectSelector() {
   return (
 
     <Stack style={{paddingRight:breakpoint}}>
-        <Image src={TempImage} alt="flower mural" fit="fill"/>
+      <Group grow>
+        <ProjectList 
+          title="Projects"
+          links={[
+            ['#/project1', 'Project 1']
+          ]}
+        />
+
+        <ProjectList 
+          title="Passions"
+          links={[
+            ['#/passion1', 'Passion 1']
+          ]}
+        />
+      </Group>
+
+      <Image src={TempImage} alt="flower mural" fit="contain" style={{maxWidth: '80%', maxHeight: '80%'}} />
     </Stack>
   );
 }

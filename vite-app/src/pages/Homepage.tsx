@@ -10,13 +10,11 @@ import {
   MantineProvider,
   AppShell,
   Burger,
-  Grid,
   Space,
   Image,
   Group,
   Title,
   NavLinkStylesNames,
-  Flex,
 } from "@mantine/core";
 
 import { useDisclosure } from "@mantine/hooks";
@@ -30,14 +28,6 @@ function Homepage() {
     <MantineProvider
       theme={{
         components: {
-          NavLink: {
-            styles: (theme, params: NavLinkStylesNames) => ({
-              label: {
-                fontSize: "1.2rem",
-                fontWeight: 700,
-              },
-            }),
-          },
           AppShell: {
             defaultProps: {
               padding: "xl",
@@ -119,7 +109,7 @@ function Homepage() {
 
             <AppShell.Footer
               hiddenFrom="md"> 
-                <Image src={tattooGif} h={100} w="100"
+                <Image src={tattooGif} h={70} w="100"
                   style={{transform: 'rotate(90deg)'}} />
             </AppShell.Footer>
 
