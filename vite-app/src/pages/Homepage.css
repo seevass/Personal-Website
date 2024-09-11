@@ -2,18 +2,16 @@
   --main-bg-color: #fff4e2;
   --main-text-color: #ffb800;
   --main-header-color: #393939;
-  font-size: clamp(1rem, 2vw + 1rem, 1.8rem);
+  --main-pink-color:#ff9188;
+  --main-blue-color:#3d6fbf;
+  --main-hot-pink-color:#f75d64;
 }
 
-body {
+body, .header, .navBar {
   background-color: var(--main-bg-color) !important;
 }
 
-.header {
-  background-color: var(--main-bg-color) !important;
-}
-
-.navBar {
-  background-color: var(--main-bg-color) !important;
+.nameTitle {
+  color: var(--main-header-color);
 }
 

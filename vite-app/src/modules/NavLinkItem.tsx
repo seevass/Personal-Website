@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { NavLink } from '@mantine/core';
 import './NavLinkItem.css';
+import { getRandomHoverColor } from '../helpers/colorUtils';
 
 interface NavLinkItemProps {
   to: string;
@@ -8,16 +9,6 @@ interface NavLinkItemProps {
 }
 
 const NavLinkItem: React.FC<NavLinkItemProps> = ({ to, label }) => {
-  const hoverColors = [
-    '#ff9188', // pink
-    '#3d6fbf', // blue
-    '#f75d64', // hot pink
-  ];
-
-  const getRandomHoverColor = () => { 
-    return hoverColors[Math.floor(Math.random() * hoverColors.length)];
-  };  
-
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -26,19 +17,18 @@ const NavLinkItem: React.FC<NavLinkItemProps> = ({ to, label }) => {
 
   const handleMouseLeave = () => {
     setIsHovered(false);
-  }
+  };
 
   const styles = {
     color: isHovered ? getRandomHoverColor() : 'var(--main-text-color)',
   };
 
-
-
   return (
-    <NavLink className="navLink"
-      label={label} 
-      component="a" 
-      href={to} 
+    <NavLink
+      className="navLink"
+      label={label}
+      component="a"
+      href={to}
       style={styles}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}

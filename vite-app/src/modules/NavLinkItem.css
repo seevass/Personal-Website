@@ -1,6 +1,10 @@
 .navLink {
     color: var(--main-text-color);
     background-color: transparent !important;
+    font-size: 3rem; /* this is for the gap between each navlink */
+}
+
+.navLink .mantine-NavLink-label {
+    font-size: 1.5rem;
     font-weight: 700;
-    font-size: 2rem;
 }

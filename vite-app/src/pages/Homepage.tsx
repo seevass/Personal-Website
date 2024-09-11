@@ -33,7 +33,7 @@ function Homepage() {
               padding: "xl",
               header: { height: 50 },
               navbar: {
-                width: 140,
+                width: 240,
                 breakpoint: "md",
                 collapsed: {
                   mobile: !opened,
@@ -86,9 +86,9 @@ function Homepage() {
                 />
               </div>
             <Image src={nameLogo} h="auto" w={150} visibleFrom="md" 
-              style={{paddingLeft:"15px", paddingTop:"40px"}}/>
+              style={{paddingLeft:"15px", paddingTop:"10px"}}/>
             <Space h="sm" />
-            <Title style={{fontSize: "1.5em", paddingLeft:"20px"}}> Sebastian Cruz</Title>
+            <Title className="nameTitle" style={{fontSize: "2em", paddingLeft:"13px", paddingTop:'20px'}}> Sebastian Cruz</Title>
             <Space h="sm" />
 
             <NavLinkItem to="#about" label="About" />

@@ -1,6 +1,7 @@
 import React from 'react';
 import './ProjectList.css';
-import { Stack, Text, NavLink } from '@mantine/core';
+import { Text, NavLink } from '@mantine/core';
+import { getRandomHoverColorNoYellow } from '../helpers/colorUtils';
 
 type ProjectListTuple = [href: string, label: string];
 
@@ -12,12 +13,15 @@ interface ProjectListProps {
 const ProjectList: React.FC<ProjectListProps> = ({ title, links }) => {
     return (
         <div>
-            <Text>{title}</Text>
-            <Stack>
-                {links.map(([href, label]) => (
-                    <NavLink className='projectLink' href={href} label={label} />
-                ))}
-            </Stack>
+            <Text className='projectLinkTitle'>{title}</Text>
+            {links.map(([href, label]) => (
+                <NavLink
+                    className='projectLink'
+                    style={{ color: getRandomHoverColorNoYellow() }}
+                    href={href}
+                    label={label}
+                />
+            ))}
         </div>
     );
 };
