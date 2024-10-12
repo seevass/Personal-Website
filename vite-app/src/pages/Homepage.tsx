@@ -3,6 +3,8 @@ import "./Homepage.css";
 
 import nameLogo from "../assets/streamText.gif";
 import tattooGif from "../assets/Barberpole_illusion_animated.gif"
+import bannerPhoto from "../assets/BannerPhoto.png";
+import sideBannerPhoto from "../assets/SideBannerPhoto.png";
 
 import "@mantine/core/styles.css";
 
@@ -104,13 +106,14 @@ function Homepage() {
 
             <AppShell.Aside
               visibleFrom="md">
-                <Image src={tattooGif} h={200} w="100" />
+                <Image src={bannerPhoto} w="200" 
+                  style={{maxWidth: '100%', maxHeight: '100%', transform: ''}} />
             </AppShell.Aside>
 
             <AppShell.Footer
               hiddenFrom="md"> 
-                <Image src={tattooGif} h={70} w="100"
-                  style={{transform: 'rotate(90deg)'}} />
+                <Image src={sideBannerPhoto} h={120} w="auto"
+                  style={{maxWidth: '100%', maxHeight: '100%', transform: ''}} />
             </AppShell.Footer>
 
         </AppShell>
