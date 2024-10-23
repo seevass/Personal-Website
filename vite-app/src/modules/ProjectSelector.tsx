@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './ProjectSelector.css';
-import { Stack, Image, Group } from '@mantine/core';
+import { Stack, Image, Group, Space } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import ProjectList from './ProjectList';
 
@@ -9,6 +9,8 @@ import KeyboardWarriorImage from '../assets/KeyboardWarrior.png';
 import QuickcastImage from '../assets/QuickCast.png';
 import BlendifyImage from '../assets/Blendify.png';
 import Passion1Image from '../assets/Passion.png';
+
+import graphicMask from "../assets/television-tv-png.png"
 
 function ProjectSelector() {
   const [imageSrc, setImageSrc] = useState(TempImage);
@@ -40,8 +42,10 @@ function ProjectSelector() {
            setImageSrc={setImageSrc} // Pass the function to handle image change
         />
       </Group>
+      <div style={{ marginBottom: '10px' }}/>
+      <Image src={graphicMask} alt="graphicOverlay" style={{maxWidth: '100%', maxHeight: '100%', transform: ''}} className="overlapping-image"/>
+      <Image src={imageSrc} alt="project preview" fit="contain" style={{ maxWidth: '100%', maxHeight: '100%', transform: 'translate(0%, -120%' }} className="background-image"/>
 
-      <Image src={imageSrc} alt="project preview" fit="contain" style={{ maxWidth: '100%', maxHeight: '100%' }} />
     </Stack>
   );
 }

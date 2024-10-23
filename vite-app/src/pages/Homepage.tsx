@@ -2,9 +2,9 @@ import React from "react";
 import "./Homepage.css";
 
 import nameLogo from "../assets/streamText.gif";
-import tattooGif from "../assets/Barberpole_illusion_animated.gif"
-import bannerPhoto from "../assets/BannerPhoto.png";
-import sideBannerPhoto from "../assets/SideBannerPhoto.png";
+import tattooGif from "../assets/Personal-Website-Gif.gif"
+import tattooGifSideways from "../assets/Personal-Website-Gif-Sideways.gif"
+
 
 import "@mantine/core/styles.css";
 
@@ -87,8 +87,7 @@ function Homepage() {
                   color="yellow"
                 />
               </div>
-            <Image src={nameLogo} h="auto" w={150} visibleFrom="md" 
-              style={{paddingLeft:"15px", paddingTop:"10px"}}/>
+              <img src={nameLogo} alt="Background Image" className="background-image" />
             <Space h="sm" />
             <Title className="nameTitle" style={{fontSize: "2em", paddingLeft:"13px", paddingTop:'20px'}}> Sebastian Cruz</Title>
             <Space h="sm" />
@@ -105,14 +104,14 @@ function Homepage() {
           </AppShell.Main>
 
             <AppShell.Aside
-              visibleFrom="md">
-                <Image src={bannerPhoto} w="200" 
-                  style={{maxWidth: '100%', maxHeight: '100%', transform: ''}} />
+              visibleFrom="md" className="aside">
+                <Image src={tattooGif} w="210" 
+                  style={{maxWidth: '100%', maxHeight: '100%', transform: '', paddingRight:'20px'}} />
             </AppShell.Aside>
 
             <AppShell.Footer
-              hiddenFrom="md"> 
-                <Image src={sideBannerPhoto} h={120} w="auto"
+              hiddenFrom="md" className="footer"> 
+                <Image src={tattooGifSideways} h={300} w="auto"
                   style={{maxWidth: '100%', maxHeight: '100%', transform: ''}} />
             </AppShell.Footer>
 
