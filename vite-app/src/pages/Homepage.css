@@ -7,11 +7,24 @@
   --main-hot-pink-color:#f75d64;
 }
 
-body, .header, .navBar, .aside, .footer {
+.main, .header, .navBar, .footer {
+  background-color: var(--main-bg-color) !important;
+}
+
+.aside {
   background-color: var(--main-bg-color) !important;
 }
 
 .nameTitle {
   color: var(--main-header-color);
+  padding-left: 13px;
+  padding-top: 20px;
 }
+
+.mantine-Image-root {
+  user-select: none;
+  pointer-events: none;
+}
+
+
 

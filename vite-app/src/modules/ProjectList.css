@@ -4,7 +4,7 @@
 }
 
 .projectLink .mantine-NavLink-label {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: 700;
 }
 
@@ -13,7 +13,7 @@
 }
 
 .projectLinkTitle {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 700;
     color: var(--main-header-color);
 }

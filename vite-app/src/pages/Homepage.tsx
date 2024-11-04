@@ -35,7 +35,7 @@ function Homepage() {
               padding: "xl",
               header: { height: 50 },
               navbar: {
-                width: 240,
+                width: 400,
                 breakpoint: "md",
                 collapsed: {
                   mobile: !opened,
@@ -70,12 +70,11 @@ function Homepage() {
             </Group>
           </AppShell.Header>
 
-          <AppShell.Navbar className="navBar" style={{ paddingLeft: "10px"}}>
+          <AppShell.Navbar className="navBar" style={{ paddingLeft: "20px"}}>
             <div
                 style={{
                   alignItems: "flex-end",
                   marginLeft: "auto",
-                  paddingRight: "20px",
                   paddingTop: "20px",
                 }}
               >
@@ -89,23 +88,23 @@ function Homepage() {
               </div>
               <img src={nameLogo} alt="Background Image" className="background-image" />
             <Space h="sm" />
-            <Title className="nameTitle" style={{fontSize: "2em", paddingLeft:"13px", paddingTop:'20px'}}> Sebastian Cruz</Title>
+            <Title className="nameTitle" style={{fontSize: "4rem"}}> Sebastian Cruz</Title>
             <Space h="sm" />
 
-            <NavLinkItem to="#about" label="About" />
+            <NavLinkItem to="/about" label="About" />
             <NavLinkItem to="#resume" label="Resume/CV" />
             <NavLinkItem to="#linkedin" label="LinkedIn" />
             <NavLinkItem to="#github" label="GitHub" />
             <NavLinkItem to="#contact" label="Contact" />
           </AppShell.Navbar>
 
-          <AppShell.Main>
+          <AppShell.Main className='main'>
             <ProjectSelector />
           </AppShell.Main>
 
             <AppShell.Aside
               visibleFrom="md" className="aside">
-                <Image src={tattooGif} w="210" 
+                <Image src={tattooGif} w="390" 
                   style={{maxWidth: '100%', maxHeight: '100%', transform: '', paddingRight:'20px'}} />
             </AppShell.Aside>
 
