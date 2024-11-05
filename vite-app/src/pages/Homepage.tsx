@@ -92,7 +92,7 @@ function Homepage() {
             <Space h="sm" />
 
             <NavLinkItem to="/about" label="About" />
-            <NavLinkItem to="#resume" label="Resume/CV" />
+            <NavLinkItem to="/resume.pdf" label="Resume/CV" />
             <NavLinkItem to="#linkedin" label="LinkedIn" />
             <NavLinkItem to="#github" label="GitHub" />
             <NavLinkItem to="#contact" label="Contact" />

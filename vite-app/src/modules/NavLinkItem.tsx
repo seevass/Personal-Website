@@ -29,6 +29,7 @@ const NavLinkItem: React.FC<NavLinkItemProps> = ({ to, label }) => {
       label={label}
       component="a"
       href={to}
+      target={to === "/resume.pdf" ? "_blank" : undefined} // Opens resume link in a new tab
       style={styles}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
