@@ -6,21 +6,20 @@ import { getRandomHoverColor } from '../helpers/colorUtils';
 interface NavLinkItemProps {
   to: string;
   label: string;
+  isExternal?: boolean;
 }
 
-const NavLinkItem: React.FC<NavLinkItemProps> = ({ to, label }) => {
-  const [isHovered, setIsHovered] = useState(false);
+const NavLinkItem: React.FC<NavLinkItemProps> = ({ to, label, isExternal = false }) => {
+  const [hoverColor, setHoverColor] = useState<string | null>(null);
 
   const handleMouseEnter = () => {
-    setIsHovered(true);
+    if (!hoverColor) {
+      setHoverColor(getRandomHoverColor());
+    }
   };
 
   const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
-
-  const styles = {
-    color: isHovered ? getRandomHoverColor() : 'var(--main-text-color)',
+    setHoverColor(null);
   };
 
   return (
@@ -29,8 +28,9 @@ const NavLinkItem: React.FC<NavLinkItemProps> = ({ to, label }) => {
       label={label}
       component="a"
       href={to}
-      target={to === "/resume.pdf" ? "_blank" : undefined} // Opens resume link in a new tab
-      style={styles}
+      target={isExternal ? '_blank' : undefined} // Opens in a new tab if external
+      rel={isExternal ? 'noopener noreferrer' : undefined} // Security for external links
+      style={{ color: hoverColor || 'var(--main-text-color)' }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     />

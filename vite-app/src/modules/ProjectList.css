@@ -10,6 +10,7 @@
 
 .projectLink .mantine-NavLink-label:hover {
     color: var(--main-hot-pink-color);
+    transition: color 0.3s ease;
 }
 
 .projectLinkTitle {

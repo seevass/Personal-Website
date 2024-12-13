@@ -5,14 +5,15 @@
   --main-pink-color:#ff9188;
   --main-blue-color:#3d6fbf;
   --main-hot-pink-color:#f75d64;
+  --transparent-color: transparent;
 }
 
-.main, .header, .navBar, .footer {
+.main, .header, .navBar, .aside{
   background-color: var(--main-bg-color) !important;
 }
 
-.aside {
-  background-color: var(--main-bg-color) !important;
+.footer {
+  background-color: var(--transparent-color) !important;
 }
 
 .nameTitle {

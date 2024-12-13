@@ -62,9 +62,9 @@ function Homepage() {
                   //opened={opened}
                   onClick={toggle}
                   hiddenFrom="md"
-                  size="md"
+                  size="lg"
                   color="yellow"
-                  style={{ padding: "10px"}}
+                  style={{ padding: "10px",}}
                 />
               </div>
             </Group>
@@ -82,10 +82,12 @@ function Homepage() {
                   opened={opened}
                   onClick={toggle}
                   hiddenFrom="md"
-                  size="md"
+                  size="xl"
                   color="yellow"
+                  style={{paddingRight: "67px"}}
                 />
               </div>
+              <Space h="sm" />
               <img src={nameLogo} alt="Background Image" className="background-image" />
             <Space h="sm" />
             <Title className="nameTitle" style={{fontSize: "4rem"}}> Sebastian Cruz</Title>
@@ -93,9 +95,9 @@ function Homepage() {
 
             <NavLinkItem to="/about" label="About" />
             <NavLinkItem to="/resume.pdf" label="Resume/CV" />
-            <NavLinkItem to="#linkedin" label="LinkedIn" />
-            <NavLinkItem to="#github" label="GitHub" />
-            <NavLinkItem to="#contact" label="Contact" />
+            <NavLinkItem to="https://www.linkedin.com/in/cruzseabass/" label="LinkedIn" isExternal/>
+            <NavLinkItem to="https://github.com/seevass" label="GitHub" isExternal />
+            <NavLinkItem to="mailto:cruzseabass@gmail.com" label="Contact" />
           </AppShell.Navbar>
 
           <AppShell.Main className='main'>
